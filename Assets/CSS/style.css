@@ -199,6 +199,11 @@ span {
   margin: 3px auto;
 }
 
+canvas {
+  margin: 5px;
+  border: 15px solid var(--darkBrown);
+  border-radius: 20px;
+}
 
 
 @media only screen and (max-width: 375px) {
