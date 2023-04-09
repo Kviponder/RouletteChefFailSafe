@@ -201,7 +201,7 @@ span {
 
 canvas {
   margin: 5px;
-  border: 15px solid var(--darkBrown);
+  border: 10px solid var(--darkBrown);
   border-radius: 20px;
 }
 
