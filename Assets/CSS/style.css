@@ -1,0 +1,237 @@
+:root {
+  --darkTan: #8d7b68;
+  --brown: #a4907c;
+  --lightBrown: #c8b6a6;
+  --tan: #f1dec9;
+  --redBrown: #864000;
+  --darkBrown: #1a120b;
+}
+::selection {
+  background-color: black;
+  color: goldenrod;
+}
+
+#bodyCSS {
+  font-family: sans-serif;
+}
+header {
+  background: linear-gradient(90deg, var(--redBrown) 5%, var(--darkBrown) 95%);
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+header h1 {
+  font-family: sans-serif;
+  font-size: 36px;
+  width: auto;
+}
+
+.fire {
+  width: fit-content;
+}
+#rChef {
+  text-align: center;
+}
+
+h1 {
+  color: #000;
+  font-family: "Amethysta", serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+}
+
+span {
+  color: #000;
+  text-transform: lowercase;
+  vertical-align: middle;
+  letter-spacing: 0.2em;
+}
+
+.fire {
+  animation: animation 1s ease-in-out infinite alternate;
+  -moz-animation: animation 1s ease-in-out infinite alternate;
+  -webkit-animation: animation 1s ease-in-out infinite alternate;
+  -o-animation: animation 1s ease-in-out infinite alternate;
+}
+
+.burn {
+  animation: animation 0.65s ease-in-out infinite alternate;
+  -moz-animation: animation 0.65s ease-in-out infinite alternate;
+  -webkit-animation: animation 0.65s ease-in-out infinite alternate;
+  -o-animation: animation 0.65s ease-in-out infinite alternate;
+}
+
+@keyframes animation {
+  0% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85,
+      -20px -20px 40px #ffae34, 20px -40px 50px #ec760c,
+      -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+  }
+  100% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #fefcc9,
+      -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
+      -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+  }
+}
+
+@-moz-keyframes animation {
+  0% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85,
+      -20px -20px 40px #ffae34, 20px -40px 50px #ec760c,
+      -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+  }
+  100% {
+    text-shadow: 0 0 20px #ee0707, 10px -10px 30px #f8f47d,
+      -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
+      -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+  }
+}
+
+@-webkit-keyframes animation {
+  0% {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85,
+      -20px -20px 40px #ffae34, 20px -40px 50px #ec760c,
+      -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+  }
+  100% {
+    text-shadow: 0 0 20px #ee0707, 10px -10px 30px #f8f47d,
+      -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
+      -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+  }
+}
+
+@-o-keyframes animation {
+  0% {
+    text-shadow: 0 0 20px #ebe313, 10px -10px 30px #feec85,
+      -20px -20px 40px #ffae34, 20px -40px 50px #c96004,
+      -20px -60px 60px #d04b0e, 0 -80px 70px #b93407, 10px -90px 80px #451b0e;
+  }
+  100% {
+    text-shadow: 0 0 20px #ee0707, 10px -10px 30px #f8f47d,
+      -20px -20px 40px #feec85, 22px -42px 60px #ffae34,
+      -22px -58px 50px #ec760c, 0 -82px 80px #cd4606, 10px -90px 80px #973716;
+  }
+}
+
+.randomBtncontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: var(--redBrown);
+  max-height: fit-content;
+}
+.randomBtncontainer h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 1rem;
+  color: var(--tan);
+  text-shadow: 1px 1px var(--brown);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.randomBtn {
+  display: block;
+  margin: 16px auto;
+  width: 75px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: var(--tan);
+  background-color: var(--brown);
+  cursor: pointer;
+}
+.randomBtn:hover {
+  background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));
+  transform: scale(1.5);
+}
+
+.randomBtn:active {
+  background-color: rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));
+  transform: translateY(2px);
+}
+
+.randomBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(var(--color-r), var(--color-g), var(--color-b));
+  color: rgb(var(--color-b), var(--color-r), var(--color-g));
+}
+
+.recipeCard {
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+}
+.recipeCard h2{
+  font-size: larger;
+
+}
+
+.recipeCard img {
+  width: 80%;
+  height: 80%;
+  padding: 10px;
+  margin: auto;
+  border: 2px solid var(--darkBrown);
+  border-radius: 24px;
+}
+
+#randomRecipe {
+  background-color: var(--lightBrown);
+  border: 2px solid var(--darkBrown);
+  border-radius: 8px;
+  padding: 10px;
+  width: 60% ;
+  height: fit-content;
+  margin: 3px auto;
+}
+
+
+
+@media only screen and (max-width: 375px) {
+  /* Blank media query for 375px width */
+  body {
+    width: 100%;
+  }
+  header h1 {
+    font-family: sans-serif;
+    animation: animation 0.65s ease-in-out infinite alternate;
+    font-size: 24px;
+    width: auto;
+    -moz-animation: animation 0.65s ease-in-out infinite alternate;
+    -webkit-animation: animation 0.65s ease-in-out infinite alternate;
+    -o-animation: animation 0.65s ease-in-out infinite alternate;
+  }
+ 
+}
+
+@media only screen and (max-width: 857px) {
+  body {
+    width: 100%;
+  }
+ 
+  #rChef {
+    scale: 70%;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    width: 100%;
+  }
+}

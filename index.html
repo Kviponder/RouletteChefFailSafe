@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DK4S0GFW2"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BQ2VM59RH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8BQ2VM59RH');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkTan: '#8D7B68',
+                        brown: '#A4907C',
+                        lightBrown: '#C8B6A6',
+                        tan: '#F1DEC9',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Roulette Chef</title>
+</head>
+
+<!-- Note to self for KAI need to finish some css, ie: random button, pantry title, recpies title
+    googleAPI, and whatever else may be needed for cards-->
+
+<body id="bodyCSS" class="bg-tan ">
+
+    <header class="" id="headerFlex">
+        <div class="fire">
+            <h1 class="">
+                <p id="rChef">
+                    <span class="fire">⊛ </span>
+                    <span class="burn">R</span>
+                    <span class="burn">o</span>
+                    <span class="burn">u</span>
+                    <span class="fire">l</span>
+                    <span class="fire">e</span>
+                    <span class="burn">t</span>
+                    <span class="burn">t</span>
+                    <span class="fire">e .</span>
+                    <span class="fire">C</span>
+                    <span class="burn">h</span>
+                    <span class="burn">e</span>
+                    <span class="burn">f</span>
+                    <span class="fire">⊛ </span>
+
+                </p>
+            </h1>
+        </div>
+
+        <!--Turn this into a sign-up/sign-in option research apis maybe-->
+    </header>
+
+    <div class="randomBtncontainer">
+  <h4>Looking for some cooking inspiration? Click the button below to generate a random recipe! Whether you're
+      a seasoned chef or a beginner in the kitchen, this recipe generator is sure to provide you with some new
+      and exciting meal ideas. Try it out now and take your cooking to the next level!</h4>
+  <button class="randomBtn" id="getRandom">Random Button</button>
+  <div id="randomRecipe" class="row recipeRan">
+    <div id="column"></div>
+  </div>
+</div>
+
+
+
+   
+    <script src="./Assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+:root {
+    --darkTan: #8d7b68;
+    --brown: #a4907c;
+    --lightBrown: #c8b6a6;
+    --tan: #f1dec9;
+    --redBrown: #864000;
+    --darkBrown: #1A120B;
+  }
+  ::selection {
+    background-color: black;
+    color: goldenrod;
+  }
+  
+  #bodyCSS {
+    font-family: "Raleway", sans-serif;
+  }
+  header {
+    background: linear-gradient(90deg, var(--redBrown) 5%, var(--darkBrown) 95%);
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    font-family: 'Raleway Dots', 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    color: var(--redBrown);
+    text-decoration: overline underline dotted;
+    text-align: center
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  nav h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  nav input[type="text"],
+  nav input[type="password"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--lightBrown);
+    width: 10rem;
+  }
+  
+  #rChef {
+    font-family: "Raleway Dots", "Raleway";
+    color: var(--redBrown);
+    left: 25%;
+  
+    text-transform: uppercase;
+    text-shadow: 1px 9px 15px black;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+  }
+  
+  aside {
+    padding: 10px;
+    border-radius: 8px;
+    width: 350px;
+    margin: 3px 2px 3px 2px;
+    border: 2px solid var(--darkBrown);
+  
+  }
+  
+  aside h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  aside input[type="search"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--darkBrown);
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    background-color: white;
+  }
+  
+  aside button[type="submit"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: var(--tan);
+    background-color: var(--brown);
+    cursor: pointer;
+  }
+  
+  aside button[type="submit"]:hover {
+    background-color: var(--darkTan);
+  }
+  #resultsCont {
+    background-color: var(--lightBrown);
+    border: 2px solid var(--darkBrown);
+    border-radius: 8px;
+    padding: 10px;
+    width: 90%;
+    margin: 3px 2px 3px 2px;
+  }
+  #resultsList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  #resultsList li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .signInBtn {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    width: 4rem;
+    height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(236, 228, 228);
+    background: linear-gradient(90deg, rgb(88, 75, 38) 0%, rgb(100, 90, 60) 100%);
+    border-radius: 4px;
+  }
+  
+  .signInBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(247, 244, 242, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #headerCSS {
+      height: 80px;
+      background-size: 100% 150px;
+    }
+    #headerCSS h1 {
+      font-size: 2.5rem;
+      padding: 1rem;
+    }
+    #background {
+      background-size: 50%;
+    }
+    #titleText {
+      background-size: 50% 80%;
+    }
+    .button {
+      font-size: 1rem;
+      padding: 2rem 0;
+      width: 4rem;
+      height: auto;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    #headerCSS {
+      height: 60px;
+      background-size: 100% 100px;
+    }
+    #headerCSS h1 {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+    #background {
+      background-size: 70%;
+    }
+    #titleText {
+      background-size: 70% 60%;
+    }
+    .button {
+      font-size: 8px;
+      padding: 1rem 0;
+      width: 2rem;
+      height: auto;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
