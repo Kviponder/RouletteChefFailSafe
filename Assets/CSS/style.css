@@ -30,7 +30,7 @@ header h1 {
   font-size: 36px;
   width: auto;
 }
-
+header 
 .fire {
   width: fit-content;
 }
@@ -197,6 +197,20 @@ span {
   width: 60% ;
   height: fit-content;
   margin: 3px auto;
+}
+
+#clearBtn {
+  display: block;
+  margin: 16px auto;
+  width: 75px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: var(--tan);
+  background-color: var(--brown);
+  cursor: pointer;
 }
 
 canvas {

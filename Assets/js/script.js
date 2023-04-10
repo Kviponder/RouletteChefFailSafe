@@ -1,4 +1,3 @@
-
 const randomRecipeBtn = document.getElementById('getRandom');
 const randomRecipeContainer = document.getElementById('randomRecipe');
 
@@ -54,6 +53,11 @@ randomBtn.addEventListener('mouseenter', () => {
   randomBtn.style.setProperty('--color-g', Math.floor(Math.random() * 255));
   randomBtn.style.setProperty('--color-b', Math.floor(Math.random() * 255));
 })
+
+
+
+
+// Set the canvas width and height
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -62,7 +66,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Define the array of balls
-const balls = [];
+let balls = [];
 
 // Define the Ball class
 class Ball {
@@ -114,6 +118,14 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+// Load saved balls from local storage if any
+if (localStorage.getItem('balls')) {
+  balls = JSON.parse(localStorage.getItem('balls'));
+  balls.forEach(ball => {
+    ball.__proto__ = Ball.prototype;
+  });
+}
+
 // Add a new ball to the array each time the button is clicked
 document.getElementById('getRandom').addEventListener('click', () => {
   const x = Math.random() * canvas.width;
@@ -124,7 +136,30 @@ document.getElementById('getRandom').addEventListener('click', () => {
   const color = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
   balls.push(new Ball(x, y, vx, vy, radius, color));
+  localStorage.setItem('balls', JSON.stringify(balls));
 });
 
 // Start the animation loop
 animate();
+
+// Display ball count
+const ballCount = document.getElementById('ballCount');
+ballCount.textContent = balls.length;
+
+// Increase ball count when a new ball is added
+document.getElementById('getRandom').addEventListener('click', () => {
+  ballCount.textContent = balls.length;
+});
+
+// Clear saved balls and ball count when the clear button is clicked
+document.getElementById('clearBtn').addEventListener('click', () => {
+  balls = [];
+  localStorage.removeItem('balls');
+  ballCount.textContent = 0;
+});
+
+const ballCountElem = document.getElementById('ballCount');
+
+function updateBallCount() {
+  ballCountElem.innerText = balls.length.toString();
+}
